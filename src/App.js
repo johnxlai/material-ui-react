@@ -14,7 +14,8 @@ import {
 } from '@mui/material';
 
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
-import ButtonGroup from '@mui/material/ButtonGroup';
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function App() {
   const color = 'white';
@@ -67,37 +68,57 @@ function App() {
         </div>
         <Container maxWidth="md" style={{ marginTop: '100px' }}>
           <Grid container spacing={4}>
-            <Grid item>
-              <Card>
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image="https://picsum.photos/200"
-                  alt="Random Image"
-                />
-                <CardMedia className="" title="Image title" />
-                <CardContent className="">
-                  <Typography gutterBottom variant="h5">
-                    Heading
-                  </Typography>
-                  <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    View
-                  </Button>
-                  <Button size="small" color="primary">
-                    Edit
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
+            {cards.map((card) => (
+              <Grid item key={card} xs="12" md="4">
+                <Card>
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image="https://picsum.photos/200"
+                    alt="Random Image"
+                  />
+                  <CardMedia className="" title="Image title" />
+                  <CardContent className="">
+                    <Typography gutterBottom variant="h5">
+                      Heading
+                    </Typography>
+                    <Typography>
+                      This is a media card. You can use this section to describe
+                      the content.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                    <Button size="small" color="primary">
+                      Edit
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </main>
+      <footer>
+        <Typography variant="h6" align="center" gutterBottom>
+          Footer
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="textSecondary"
+          gutterBottom
+          sx={{
+            bgcolor: 'secondary.main',
+            color: 'secondary.contrastText',
+            p: 2,
+            mb: 0,
+          }}>
+          Something here to give the footer a purpose!
+        </Typography>
+      </footer>
     </>
   );
 }
