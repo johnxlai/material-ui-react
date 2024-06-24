@@ -65,6 +65,38 @@ function App() {
             </div>
           </Container>
         </div>
+        <Container maxWidth="md" style={{ marginTop: '100px' }}>
+          <Grid container spacing={4}>
+            <Grid item>
+              <Card>
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image="https://picsum.photos/200"
+                  alt="Random Image"
+                />
+                <CardMedia className="" title="Image title" />
+                <CardContent className="">
+                  <Typography gutterBottom variant="h5">
+                    Heading
+                  </Typography>
+                  <Typography>
+                    This is a media card. You can use this section to describe
+                    the content.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    View
+                  </Button>
+                  <Button size="small" color="primary">
+                    Edit
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Grid>
+        </Container>
       </main>
     </>
   );
