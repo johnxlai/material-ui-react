@@ -1,10 +1,30 @@
 import './App.css';
+import {
+  Typography,
+  AppBar,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  CssBaseline,
+  Grid,
+  Toolbar,
+  Container,
+} from '@mui/material';
+
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello</h1>
-    </div>
+    <>
+      <CssBaseline />
+      <AppBar position="relative">
+        <Toolbar>
+          <PhotoCameraIcon />
+          <Typography variant="h6">Photo Album</Typography>
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }
 
